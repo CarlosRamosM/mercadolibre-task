@@ -1,0 +1,28 @@
+server:
+  port: 8080
+  error:
+    include-message: always
+  servlet:
+    context-path: /message-service
+spring:
+  cache:
+    type: redis
+  redis:
+    host: ${REDIS_CACHE_HOST:localhost}
+    port: ${REDIS_CACHE_PORT:6379}
+    timeout: ${REDIS_CACHE_TTL:900000}
+
+alliance:
+  satellites:
+    kenobi:
+      coordinates:
+        - -500
+        - -200
+    skywalker:
+      coordinates:
+        - 100
+        - -100
+    sato:
+      coordinates:
+        - 500
+        - 100
